@@ -3,6 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CalculatorTest {
 
@@ -32,5 +33,14 @@ public class CalculatorTest {
         assertEquals(0, calculator.multiply(5, 0), "Multiple with zero should be zero");
         System.out.println("<<Test testMultiplyWithZero Starting");
     }
+
+
+    @Test
+    @DisplayName("Any test")
+    void test() {
+        assertTrue('a' < 'b', () -> "Assertion messages can be lazily evaluated -- "
+                + "to avoid constructing complex messages unnecessarily." );
+    }
+
 
 }
